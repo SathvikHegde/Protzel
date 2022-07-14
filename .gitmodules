@@ -1,0 +1,3 @@
+[submodule "Protzel/vendor/spdlog"]
+	path = Protzel/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
