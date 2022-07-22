@@ -1,7 +1,6 @@
 #pragma once
 
-#include <string>
-#include <functional>
+#include "ptzpch.h"
 
 #include "Protzel/Core.h"
 
