@@ -31,7 +31,6 @@ namespace Protzel
 
         if (!s_GLFWInitialized)
         {
-            n
             int success = glfwInit();
             PTZ_CORE_ASSERT(success, "Could not intialize GLFW!");
 
