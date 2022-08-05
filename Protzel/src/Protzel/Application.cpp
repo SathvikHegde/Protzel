@@ -2,7 +2,6 @@
 
 #include "Application.h"
 #include "Events/ApplicationEvent.h"
-#include "Log.h"
 
 namespace Protzel
 {
@@ -21,6 +20,5 @@ namespace Protzel
         {
             m_Window->OnUpdate();
         }
-        while(true);
     }
 }

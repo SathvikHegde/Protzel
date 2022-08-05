@@ -27,12 +27,12 @@ namespace Protzel
         m_Data.Width = props.Width;
         m_Data.Height = props.Height;
 
-        PTZ_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
+        PTZ_CORE_INFO("Creating window '{0}' ({1}, {2})", props.Title, props.Width, props.Height);
 
         if (!s_GLFWInitialized)
         {
             int success = glfwInit();
-            PTZ_CORE_ASSERT(success, "Could not intialize GLFW!");
+            PTZ_CORE_ASSERT(success, "Could not initialize GLFW!");
 
             s_GLFWInitialized = true;
         }
@@ -48,7 +48,7 @@ namespace Protzel
         glfwDestroyWindow(m_Window);
     }
 
-    void LinuxsWindow::OnUpdate()
+    void LinuxWindow::OnUpdate()
     {
         glfwPollEvents();
         glfwSwapBuffers(m_Window);

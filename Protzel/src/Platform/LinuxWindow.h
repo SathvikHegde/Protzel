@@ -7,7 +7,7 @@
 namespace Protzel
 {
 
-    class LinuxWindow
+    class LinuxWindow : public Window
     {
     public:
         LinuxWindow(const WindowProps& props);

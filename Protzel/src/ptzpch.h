@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Protzel/Log.h"
+
 #include <iostream>
 #include <memory>
 #include <utility>

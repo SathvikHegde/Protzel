@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
 {
     Protzel::Log::Init();
     PTZ_CORE_INFO("Initialized!");
-    PTZ_ERROR("Namaskar");
+    PTZ_INFO("Namaskar!");
     auto app = Protzel::CreateApplication();
     app->run();
     delete app;
