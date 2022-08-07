@@ -1,5 +1,7 @@
 #include <Protzel.h>
 
+//TODO: Add MDd build option to debug and MD to others
+
 class TestLayer : public Protzel::Layer
 {
 public:

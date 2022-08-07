@@ -2,6 +2,8 @@
 
 #include "ptzpch.h"
 
+#include <glad/glad.h>
+
 #include "Protzel/Events/ApplicationEvent.h"
 #include "Protzel/Events/KeyEvent.h"
 #include "Protzel/Events/MouseEvent.h"
@@ -49,6 +51,10 @@ namespace Protzel
 
         m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
         glfwMakeContextCurrent(m_Window);
+
+        int status = gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
+        PTZ_CORE_ASSERT(status, "Failed to initialize glad!");
+
         glfwSetWindowUserPointer(m_Window, &m_Data);
         SetVSync(true);
 
