@@ -11,7 +11,7 @@ add_subdirectory(vendor/GLFW vendor/GLFW/build)
 
 find_package(OpenGL REQUIRED)
 
-add_library(Protzel SHARED src/Protzel.h src/Protzel/Core.h src/Protzel/Application.cpp src/Protzel/Application.h src/Protzel/EntryPoint.h src/Protzel/Log.cpp src/Protzel/Log.h src/Protzel/Events/Event.h src/Protzel/Events/KeyEvent.h src/Protzel/Events/MouseEvent.h src/Protzel/Events/ApplicationEvent.h src/ptzpch.h src/Protzel/Window.h src/Platform/LinuxWindow.cpp src/Platform/LinuxWindow.h)
+add_library(Protzel SHARED src/Protzel.h src/Protzel/Core.h src/Protzel/Application.cpp src/Protzel/Application.h src/Protzel/EntryPoint.h src/Protzel/Log.cpp src/Protzel/Log.h src/Protzel/Events/Event.h src/Protzel/Events/KeyEvent.h src/Protzel/Events/MouseEvent.h src/Protzel/Events/ApplicationEvent.h src/ptzpch.h src/Protzel/Window.h src/Platform/LinuxWindow.cpp src/Platform/LinuxWindow.h src/Protzel/Layer.cpp src/Protzel/Layer.h src/Protzel/LayerStack.cpp src/Protzel/LayerStack.h)
 
 target_include_directories(Protzel PRIVATE src/ ${OPENGL_INCLUDE_DIRS})
 target_link_libraries(Protzel ${OPENGL_LIBRARIES} glfw)
