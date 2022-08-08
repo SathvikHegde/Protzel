@@ -4,3 +4,7 @@
 [submodule "Protzel/vendor/GLFW"]
 	path = Protzel/vendor/GLFW
 	url = https://github.com/glfw/glfw.git
+[submodule "Protzel/vendor/imgui"]
+	path = Protzel/vendor/imgui
+	url = https://github.com/SathvikHegde/imgui.git
+	branch = docking

@@ -15,7 +15,6 @@ public:
     void OnEvent(Protzel::Event& event) override
     {
         PTZ_TRACE("{0}", event);
-
     }
 };
 
