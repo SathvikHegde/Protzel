@@ -24,6 +24,7 @@ public:
     Sandbox()
     {
         PushLayer(new TestLayer());
+        PushOverlay(new Protzel::ImGuiLayer);
     }
     ~Sandbox()
     {
