@@ -9,3 +9,4 @@
 #endif
 
 #define BIT(x) (1 << x)
+#define PTZ_BIND_EVENT(x) std::bind(&x, this, std::placeholders::_1)
