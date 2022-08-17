@@ -8,7 +8,7 @@
 
 namespace Protzel
 {
-    class ImGuiLayer : public Layer
+    class PROTZEL_API ImGuiLayer : public Layer
     {
     public:
         ImGuiLayer();

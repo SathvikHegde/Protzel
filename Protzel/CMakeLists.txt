@@ -15,7 +15,12 @@ find_package(OpenGL REQUIRED)
 
 add_library(Protzel SHARED src/Protzel.h src/Protzel/Core.h src/Protzel/Application.cpp src/Protzel/Application.h src/Protzel/EntryPoint.h src/Protzel/Log.cpp src/Protzel/Log.h src/Protzel/Events/Event.h src/Protzel/Events/KeyEvent.h src/Protzel/Events/MouseEvent.h src/Protzel/Events/ApplicationEvent.h src/ptzpch.h src/Protzel/Window.h src/Platform/LinuxWindow.cpp src/Platform/LinuxWindow.h src/Protzel/Layer.cpp src/Protzel/Layer.h src/Protzel/LayerStack.cpp src/Protzel/LayerStack.h src/Protzel/ImGui/ImGuiLayer.h src/Protzel/ImGui/ImGuiLayer.cpp src/Platform/OpenGL/imgui_impl_opengl3.h src/Platform/OpenGL/imgui_impl_opengl3.cpp)
 
-target_compile_definitions(Protzel PUBLIC GLFW_INCLUDE_NONE IMGUI_IMPL_OPENGL_LOADER_CUSTOM)
+if(WIN32)
+    target_compile_definitions(Protzel PUBLIC PTZ_PLATFORM_WIN GLFW_INCLUDE_NONE IMGUI_IMPL_OPENGL_LOADER_CUSTOM)
+endif()
+if(UNIX AND NOT APPLE)
+    target_compile_definitions(Protzel PUBLIC PTZ_PLATFORM_LINUX GLFW_INCLUDE_NONE IMGUI_IMPL_OPENGL_LOADER_CUSTOM)
+endif()
 
 target_include_directories(Protzel PRIVATE src/ ${OPENGL_INCLUDE_DIRS})
 target_link_libraries(Protzel ${OPENGL_LIBRARIES} glfw glad imgui)

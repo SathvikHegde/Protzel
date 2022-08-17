@@ -6,7 +6,7 @@
 
 namespace Protzel
 {
-    class WindowResizeEvent : public Event
+    class PROTZEL_API WindowResizeEvent : public Event
     {
     public:
         WindowResizeEvent(unsigned int width, unsigned int height): m_Width(width), m_Height(height) {}
@@ -27,7 +27,7 @@ namespace Protzel
         unsigned int m_Width, m_Height;
     };
 
-    class WindowCloseEvent : public Event
+    class PROTZEL_API WindowCloseEvent : public Event
     {
     public:
         WindowCloseEvent() {}
@@ -36,7 +36,7 @@ namespace Protzel
         EVENT_CLASS_CATEGORY(EventCategoryApplication)
     };
 
-    class AppTickEvent : public Event
+    class PROTZEL_API AppTickEvent : public Event
     {
     public:
         AppTickEvent() {}
@@ -45,7 +45,7 @@ namespace Protzel
         EVENT_CLASS_CATEGORY(EventCategoryApplication)
     };
 
-    class AppUpdateEvent : public Event
+    class PROTZEL_API AppUpdateEvent : public Event
     {
     public:
         AppUpdateEvent() {}
@@ -54,7 +54,7 @@ namespace Protzel
         EVENT_CLASS_CATEGORY(EventCategoryApplication)
     };
 
-    class AppRenderEvent : public Event
+    class PROTZEL_API AppRenderEvent : public Event
     {
     public:
         AppRenderEvent() {}

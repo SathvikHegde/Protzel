@@ -15,3 +15,7 @@
 #include <unordered_set>
 #include <sstream>
 
+#ifdef PTZ_PLATFORM_WIN
+    #include <Windows.h>
+#endif
+

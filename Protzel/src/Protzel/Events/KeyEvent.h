@@ -4,7 +4,7 @@
 
 namespace Protzel
 {
-    class KeyEvent : public Event
+    class PROTZEL_API KeyEvent : public Event
     {
     public:
         inline int GetKeyCode() const { return m_KeyCode; }
@@ -17,7 +17,7 @@ namespace Protzel
         int m_KeyCode;
     };
 
-    class KeyPressedEvent : public KeyEvent
+    class PROTZEL_API KeyPressedEvent : public KeyEvent
     {
     public:
         KeyPressedEvent(int keycode, int repeatCount) : KeyEvent(keycode), m_RepeatCount(repeatCount) {}
@@ -37,7 +37,7 @@ namespace Protzel
         int m_RepeatCount;
     };
 
-    class KeyReleasedEvent : public KeyEvent
+    class PROTZEL_API KeyReleasedEvent : public KeyEvent
     {
     public:
         KeyReleasedEvent(int keycode) : KeyEvent(keycode) {}
@@ -52,7 +52,7 @@ namespace Protzel
         EVENT_CLASS_TYPE(KeyReleased)
     };
 
-    class KeyTypedEvent : public KeyEvent
+    class PROTZEL_API KeyTypedEvent : public KeyEvent
     {
     public:
         KeyTypedEvent(int keycode) : KeyEvent(keycode) {}

@@ -31,7 +31,7 @@ namespace Protzel
 
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 
-    class Event
+    class PROTZEL_API Event
     {
     public:
         bool Handled = false;

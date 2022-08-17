@@ -6,7 +6,7 @@
 
 namespace Protzel
 {
-    class LayerStack
+    class PROTZEL_API LayerStack
     {
     public:
         LayerStack();

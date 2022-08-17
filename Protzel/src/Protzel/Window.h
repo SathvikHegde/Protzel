@@ -19,7 +19,8 @@ namespace Protzel
                     : Title(title), Width(width), Height(height) {}
     };
 
-    class Window {
+    class PROTZEL_API Window
+    {
     public:
         using EventCallbackFn = std::function<void(Event&)>;
 

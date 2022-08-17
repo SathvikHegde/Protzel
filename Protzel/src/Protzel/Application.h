@@ -7,7 +7,7 @@
 
 namespace Protzel
 {
-    class Application
+    class PROTZEL_API Application
     {
     public:
         Application();

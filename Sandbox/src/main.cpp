@@ -2,6 +2,7 @@
 
 //TODO: Add MDd build option to debug and MD to others
 //TODO: Add imgui.ini stuff and check the diff
+//TODO: Add specific export functions using #define PROTZEL_API __attribute__((visibility("default")))
 
 class TestLayer : public Protzel::Layer
 {
