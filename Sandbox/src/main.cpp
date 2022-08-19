@@ -1,6 +1,6 @@
 #include <Protzel.h>
 
-//TODO: Add MDd build option to debug and MD to others
+//TODO: Fix MouseKeyCodes!
 
 class TestLayer : public Protzel::Layer
 {
@@ -9,12 +9,16 @@ public:
 
     void OnUpdate() override
     {
-        PTZ_INFO("TestLayer::Update");
+        //PTZ_INFO("TestLayer::Update");
+        if(Protzel::Input::IsKeyPressed(PTZ_KEY_SPACE))
+        {
+            PTZ_TRACE("Space is pressed!");
+        }
     }
 
     void OnEvent(Protzel::Event& event) override
     {
-        PTZ_TRACE("{0}", event);
+        //PTZ_TRACE("{0}", event);
     }
 };
 
