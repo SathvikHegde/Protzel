@@ -4,9 +4,11 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>
 
+#include "Protzel/Core.h"
+
 namespace Protzel
 {
-    class Log
+    class PROTZEL_API Log
     {
     public:
         static void Init();

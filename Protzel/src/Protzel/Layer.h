@@ -4,7 +4,7 @@
 
 namespace Protzel
 {
-    class Layer
+    class PROTZEL_API Layer
     {
     public:
         Layer(const std::string& name = "Layer");
