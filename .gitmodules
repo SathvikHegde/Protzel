@@ -8,3 +8,6 @@
 	path = Protzel/vendor/imgui
 	url = https://github.com/SathvikHegde/imgui.git
 	branch = docking
+[submodule "Protzel/vendor/glm"]
+	path = Protzel/vendor/glm
+	url = https://github.com/g-truc/glm.git
